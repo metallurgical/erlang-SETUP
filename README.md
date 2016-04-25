@@ -4,7 +4,8 @@
 ![alt text][logo_main]  Erlang Inital Setup
 ------------
 Configurations Setting for ERLANG to work with both linux and windows. Requirements Need :
-  - YAWS web server
+  - YAWS web server(optional)
+  - MOCHIWEB Web Server(optional - easy to setup)
   - ERLANG
   - relab
 
@@ -23,6 +24,26 @@ Configurations Setting for ERLANG to work with both linux and windows. Requireme
 - **( Linux )**
   - run `sudo apt-get install erlang`
   - Done!
+
+![alt text][logo_main]  Mochiweb Installation(Skip if not related)
+-----------
+Mochiweb is a lightweight http web server created to run erlang code as easy as possible. To run our application. First we need to install Mochiweb and create our application using Mochiweb Built-In command for creating new project.
+- **( Windows)**
+  - coming
+- **( Linux )**
+  - In our example, go to main container place for our application. Mine is : `/home/metallurgical/Documents/erlang`.
+  - Cloning mochiweb repo from github
+    - `git clone git://github.com/mochi/mochiweb.git`
+  - After finish cloning, enter into directory : `cd mochiweb`
+  - (IMPORTANT) Create our application there by using this command :
+    - `make app PROJECT=cobaan`
+    - Mochiweb will create cobaan application **outside** the folder mochiweb, not the **inside**.
+  - Go into newly created application : `cd ..(jump out into parent dir)` and followed by `cd cobaan(project name)`
+  - Compile the new application : `make`
+  - And finally run the server by running the shell script: `./start-dev.sh`, after execute, you can see a bunch of report message indicate that the application are running.
+  - And now, you can open the browser and type `localhost:8080` from the url and see the successfull message there. As default, mochiweb will run the server on `port 8080`
+
+  
 
 ![alt text][logo_main]  Yaws Installation
 -----------

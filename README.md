@@ -30,9 +30,9 @@ Configurations Setting for ERLANG to work with both linux and windows. Requireme
   - Install as ussual
   - After finish, need to setup environemt `path` for `yams` command to work in CLI.
     - Ussually the yams's bin path automatically added into path environment variable. If not, copy the bin's path, mine is : `C:\Program Files (x86)\Yaws-2.0.2\bin;` at the time of writing
-  -Finish, Now you can start the yams's server by typing :
+  - Finish, Now you can start the `yams's` server by typing :
     - `yams -i`
-    - You should see the message from the CLI that the yam's server is running on port ****. 
+    - You should see the message from the CLI that the `yam's server is running on port ****`
     - Open it from the browser and should see the yams's page with example.
 - **( Linux )**
   - Coming...

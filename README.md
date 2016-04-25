@@ -21,7 +21,8 @@ Configurations Setting for ERLANG to work with both linux and windows. Requireme
     - Append those variable with the copied path. Should be : `....;C:\Program Files\erl7.3\bin;`
   - Finish install. Now the `erl` or `werl` command should be avalaible inside CLI.
 - **( Linux )**
-  - Coming..
+  - run `sudo apt-get install erlang`
+  - Done!
 
 ![alt text][logo_main]  Yaws Installation
 -----------

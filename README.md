@@ -112,3 +112,5 @@ Rebar is an Erlang build tool that makes it easy to compile and test Erlang appl
   - DONE
 - **( Linux )**
   - coming....
+- **References**
+  - Rebar repo : https://github.com/basho/rebar

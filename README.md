@@ -7,7 +7,23 @@ Configurations Setting for ERLANG to work with both linux and windows. Requireme
   - YAWS web server(optional)
   - MOCHIWEB Web Server(optional - easy to setup)
   - ERLANG
-  - relab
+  - rebar(erlang compiler)
+  - cygwin(unix-like environment for windows)
+
+![alt text][logo_main]  Cygwin Installation
+-----------
+A large collection of GNU and Open Source tools which provide functionality similar to a Linux distribution on Windows.
+A DLL (cygwin1.dll) which provides substantial POSIX API functionality. After install this, you can use linux command on windows by using cygwin bash CLI.
+- Download the installer here : https://www.cygwin.com/install.html , choose either 32bit or 64bit depend on your cpu bit.
+- Install the installer, and after finish installation, windows should popup which give you permission to choose the library to download. As cygwin not install all the package and DO NOT INSTALL ALL THE PACKAGE(because there is a package that we dont use). For safety, just leave the installer to choose default option to install.
+- DONE!
+- You can also intall the package directly from the cygwin bash like linux terminal. To enable this follow further step :
+  - Install `apt-cyg` first
+    - `lynx -source rawgit.com/transcode-open/apt-cyg/master/apt-cyg > apt-cyg`
+    - `install apt-cyg /bin`
+  - After that you'll be able to install say the package "lynx" including dependencies by running:
+    - `apt-cyg install lynx`
+    - or `apt-cyg install make`
 
 ![alt text][logo_main]  Erlang Installation
 -----------
@@ -29,7 +45,22 @@ Configurations Setting for ERLANG to work with both linux and windows. Requireme
 -----------
 Mochiweb is a lightweight http web server created to run erlang code as easy as possible. To run our application. First we need to install Mochiweb and create our application using Mochiweb Built-In command for creating new project.
 - **( Windows)**
-  - coming
+  - Open `cygwin` bash terminal
+  - In our example, go to main container place for our application. Mine is : `C:/erlang`.
+  - Cloning mochiweb repo from github
+    - `git clone git://github.com/mochi/mochiweb.git`
+  - After finish cloning, enter into directory : `cd mochiweb`
+  - (IMPORTANT) Create our application there by using this command :
+    - `make app PROJECT=cobaan`
+    - `make` command in default does not available on cygwin package, to enable this, we need to download the `make` package
+      - See **CYGWIN** installation step above, go to package installation part. After install `apt-cyg` command, we can install `make` package nby typing : `apt-cyg install make`. 
+      - DONE!
+      - Then, re-type `make app PROJECT=cobaan` again(skip if already passed and successfull)
+    - Mochiweb will create `cobaan` application **outside** the folder mochiweb, not the **inside**.
+  - Go into newly created application : `cd ..(jump out into parent dir)` and followed by `cd cobaan(project name)`
+  - Compile the new application : `make`
+  - And finally run the server by running the shell script: `./start-dev.sh`, after execute, you can see a bunch of report message indicate that the application are running.
+  - And now, you can open the browser and type `localhost:8080` from the url and see the successfull message there. As default, mochiweb will run the server on `port 8080`
 - **( Linux )**
   - In our example, go to main container place for our application. Mine is : `/home/metallurgical/Documents/erlang`.
   - Cloning mochiweb repo from github
@@ -42,6 +73,10 @@ Mochiweb is a lightweight http web server created to run erlang code as easy as 
   - Compile the new application : `make`
   - And finally run the server by running the shell script: `./start-dev.sh`, after execute, you can see a bunch of report message indicate that the application are running.
   - And now, you can open the browser and type `localhost:8080` from the url and see the successfull message there. As default, mochiweb will run the server on `port 8080`
+
+- **References**
+  - Installation `apt-cyg` : http://superuser.com/a/41139
+  - Mochiweb repo : https://github.com/mochi/mochiweb
 
   
 

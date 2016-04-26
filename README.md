@@ -10,7 +10,7 @@ Configurations Setting for ERLANG to work with both linux and windows. Requireme
   - rebar(erlang compiler)
   - cygwin(unix-like environment for windows)
 
-![alt text][logo_main]  Cygwin Installation
+![alt text][logo_main]  Cygwin Installation( Windows User )
 -----------
 A large collection of GNU and Open Source tools which provide functionality similar to a Linux distribution on Windows.
 A DLL (cygwin1.dll) which provides substantial POSIX API functionality. After install this, you can use linux command on windows by using cygwin bash CLI.
@@ -80,7 +80,7 @@ Mochiweb is a lightweight http web server created to run erlang code as easy as 
 
   
 
-![alt text][logo_main]  Yaws Installation
+![alt text][logo_main]  Yaws Installation( Skip if not related )
 -----------
 - **( Windows)**
   - Download it from here http://yaws.hyber.org/download/ or http://yaws.hyber.org/download/Yaws-2.0.2-windows-installer.exe (Choose based on your pc's specification)

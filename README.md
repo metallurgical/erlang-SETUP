@@ -93,3 +93,22 @@ Mochiweb is a lightweight http web server created to run erlang code as easy as 
     - Open it from the browser and should see the yams's page with example.
 - **( Linux )**
   - Coming...
+
+![alt text][logo_main]  Rebar Installation
+-----------
+Rebar is an Erlang build tool that makes it easy to compile and test Erlang applications, port drivers and releases. rebar is a self-contained Erlang script, so it's easy to distribute or even embed directly in a project. Where possible, rebar uses standard Erlang/OTP conventions for project structures, thus minimizing the amount of build configuration work. rebar also provides dependency management, enabling application writers to easily re-use common libraries from a variety of locations (git, hg, etc).
+- **( Windows )**
+  - Cloning rebar repo into specified directory. Must be note that, rebar is standalone code, so, you can install it anywhere as later we will add rebar's path into windows environment path variable. 
+  - Open `cygwin` bash : git clone git://github.com/rebar/rebar.git ( i clone this on C:  drive )
+  - After the cloning, rebar folder should be created. cd into that folder : `cd rebar`
+  - And compile the code : `./bootstrap` (should have bootstrap.bat file on rebar folder)
+  - After execute above command, you should able to see the compile message from the terminal and if successfull should see this message :
+    - `Congratulations! You now have a self-contained script called "rebar" in your current working directory. Place this script anywhere in your path and you can use rebar to build OTP-compliant apps.`
+  - After finish compile, you can see the `rebar.cmd` file was created. 
+  - To enable `rebar` command works on CMD or cygwin bash, we must add the rebar path into windows environment variable path.
+  - Go to system variable on windows, find the `path` variable under system variable section, and append this path, mine is : `....;C:\rebar\rebar;`
+  - Choose ok and done.
+  - After this, rebar command should available on CLI.
+  - DONE
+- **( Linux )**
+  - coming....

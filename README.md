@@ -9,6 +9,7 @@ Configurations Setting for ERLANG to work with both linux and windows. Requireme
   - ERLANG
   - rebar(erlang compiler)
   - cygwin(unix-like environment for windows)
+  - Kerl( easy tools to handle otp/erlang installation - mainly for linux )
 
 ![alt text][logo_main]  Cygwin Installation( Windows User )
 -----------
@@ -114,3 +115,32 @@ Rebar is an Erlang build tool that makes it easy to compile and test Erlang appl
   - coming....
 - **References**
   - Rebar repo : https://github.com/basho/rebar
+  
+![alt text][logo_main]  Kerl Installation
+-----------
+- **( Windows )**
+  - coming...
+- **( Linux )**
+  - Open terminal `ctrl + alt + t`
+  - Download script directly from github : `curl -O https://raw.githubusercontent.com/kerl/kerl/master/kerl`
+  - And make it executable : `chmod a+x kerl`
+  - And drop it into the PATH to ensure the `kerl` command is global by :
+    - 1st option : copy the `kerl`'s executable file from dir that we download it, and cut those file and paste into : `/usr/local/bin`
+    - 2nd option by using terminal : `export PATH=$PATH:/path/where/the/file/is/download/name_of_file_we_downloaded`
+  - Done, this should be make the `kerl` command is available from any path where you located.
+  - Now we can manage/install/activate/deactivate/list the erlang/otp build anytime.
+- **References**
+  - kerl : https://github.com/kerl/kerl
+  
+
+![alt text][logo_main]  Erlang Installation using kerl
+-----------
+- **( Windows )**
+  - coming...
+- **( Linux )**
+  - Before we install erlang build, here is a a command to list the available releases
+    - `kerl list releases`, output :
+    - `Getting the available releases from erlang.org...
+       R10B-0 R10B-10 R10B-1a R10B-2 R10B-3 R10B-4 R10B-5 R10B-6 R10B-7 R10B-8 R10B-9 R11B-0 R11B-1 R11B-2 R11B-3 R11B-4 R11B-5 R12B-0 R12B-1 R12B-2 R12B-3 R12B-4 R12B-5 R13A R13B01 R13B02-1 R13B02 R13B03 R13B04 R13B R14A R14B01 R14B02 R14B03 R14B04 R14B_erts-5.8.1.1 R14B R15B01 R15B02 R15B02_with_MSVCR100_installer_fix R15B03-1 R15B03 R15B R16A_RELEASE_CANDIDATE R16B01 R16B02 R16B03-1 R16B03 R16B 17.0-rc1 17.0-rc2 17.0 17.1 17.3 17.4 17.5 18.0 18.1 18.2.1 18.2 18.3
+       Run "./kerl update releases" to update this list from erlang.org`
+  - Then pick which build to install : `kerl build 17.0 17.0` --> kerl build <release> <build_name>

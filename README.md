@@ -180,6 +180,7 @@ Rebar is an Erlang build tool that makes it easy to compile and test Erlang appl
   - If success, you can browse the project at `http://localhost:8001/` with port 8001 as default.
   - Have Fun!!
 - **( Linux )**
+  - **working test chicago framework is with otp/erlang 17.0 and chicagoBoss 0.8.19**
   - make sure erlang is installed ( refer erlang part )
   - make sure rebar is installed ( refer rebar part )
   - make sure git is installed

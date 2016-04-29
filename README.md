@@ -42,9 +42,9 @@ A DLL (cygwin1.dll) which provides substantial POSIX API functionality. After in
   - run `sudo apt-get install erlang`
   - Done!
   
-![alt text][logo_main]  Erlang Installation using kerl
+![alt text][logo_main]  Erlang Installation using kerl(Recommended)
 -----------
-You should see the kerl installation. Find on this page.
+Before going through this part, you should see the kerl installation. Find on this page. Skip those part if already intalled
 - **( Windows )**
   - coming...
 - **( Linux )**

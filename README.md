@@ -168,7 +168,7 @@ Rebar is an Erlang build tool that makes it easy to compile and test Erlang appl
   - make sure git is installed
   - Download ChicagoBoss here : http://chicagoboss.org/download.htm or https://github.com/ChicagoBoss/ChicagoBoss/archive/v0.8.19.zip
   - Extract archive and copy that folder into your root project container `eg:c://erlang/chicagoBoss [later on chicago will create project inside erlang folder, not inside chicago folder`
-  - open `cygwin`[we need this terminal always as window did't support linux command
+  - open `cygwin` **[we need this terminal always as window did't support linux command]**
   - cd into chicagoboss folder
   - run `./rebar get-deps` to donwload dependencies
   - run `./rebar compile` to compile the source
@@ -180,5 +180,24 @@ Rebar is an Erlang build tool that makes it easy to compile and test Erlang appl
   - If success, you can browse the project at `http://localhost:8001/` with port 8001 as default.
   - Have Fun!!
 - **( Linux )**
-
+  - make sure erlang is installed ( refer erlang part )
+  - make sure rebar is installed ( refer rebar part )
+  - make sure git is installed
+  - Download ChicagoBoss here : http://chicagoboss.org/download.htm or https://github.com/ChicagoBoss/ChicagoBoss/archive/v0.8.19.tar.gz
+  - Extract archive and copy that folder into your root project container `eg:/home/**/Documents/erlang/chicagoBoss [later on chicago will create project inside erlang folder, not inside chicago folder`
+  - open terminal
+  - `cd` into chicagoboss folder
+  - run `./rebar get-deps` to donwload dependencies
+  - run `./rebar compile` to compile the source
+  - Done!
+  - Create new project : `make app PROJECT=rahm`
+  - Go into created project : `cd ../rahm`
+  - Create new controller, refer this : https://github.com/ChicagoBoss/ChicagoBoss/wiki/Quickstart
+  - Start the server using `./init-dev.sh`
+  - If success, you can browse the project at `http://localhost:8001/` with port 8001 as default.
+  - Have Fun!!
+- **References**
+  - ChicagoBoss-0.8.19 : http://chicagoboss.org/download.htm
+  - ChicagoBoss for windows step(not working - try to test ) : https://github.com/ChicagoBoss/ChicagoBoss/wiki/Windows-instructions
+  - ChicagoBoss for linux step: https://github.com/ChicagoBoss/ChicagoBoss/wiki/Quickstart
   

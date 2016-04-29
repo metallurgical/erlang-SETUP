@@ -10,6 +10,7 @@ Configurations Setting for ERLANG to work with both linux and windows. Requireme
   - rebar(erlang compiler)
   - cygwin(unix-like environment for windows)
   - Kerl( easy tools to handle otp/erlang installation - mainly for linux )
+  - ChicagoBoss(0.8.19 at the time of writing)(MVC Erlang framework)
 
 ![alt text][logo_main]  Cygwin Installation( Windows User )
 -----------
@@ -159,6 +160,25 @@ Rebar is an Erlang build tool that makes it easy to compile and test Erlang appl
 - **References**
   - kerl : https://github.com/kerl/kerl
   
-
+![alt text][logo_main]  ChicagoBoss Installation
+-----------
+- **( Windows ) - not really suitable for programming developement suckkkkkk**
+  - make sure erlang is installed ( refer erlang part )
+  - make sure rebar is installed ( refer rebar part )
+  - make sure git is installed
+  - Download ChicagoBoss here : http://chicagoboss.org/download.htm or https://github.com/ChicagoBoss/ChicagoBoss/archive/v0.8.19.zip
+  - Extract archive and copy that folder into your root project container `eg:c://erlang/chicagoBoss [later on chicago will create project inside erlang folder, not inside chicago folder`
+  - open `cygwin`[we need this terminal always as window did't support linux command
+  - cd into chicagoboss folder
+  - run `./rebar get-deps` to donwload dependencies
+  - run `./rebar compile` to compile the source
+  - Done!
+  - Create new project : `make app PROJECT=rahm`
+  - Go into created project : `cd ../rahm`
+  - Create new controller, refer this : https://github.com/ChicagoBoss/ChicagoBoss/wiki/Quickstart
+  - Start the server using `./start-server.bat`
+  - If success, you can browse the project at `http://localhost:8001/` with port 8001 as default.
+  - Have Fun!!
+- **( Linux )**
 
   

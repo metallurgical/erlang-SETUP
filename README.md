@@ -136,11 +136,12 @@ Rebar is an Erlang build tool that makes it easy to compile and test Erlang appl
   - After this, rebar command should available on CLI.
   - DONE
 - **( Linux )**
-  - coming....
-- **References**
   - Rebar installation are availble from the linux source repo. To install just run  : `sudo apt-get install rebar`
   - The path automatically added into bin folder. And you're done.
   - After this we can compile the erlang code using command `./rebar compile` or `rebar compile` from the working project directory
+- **References**
+  - https://github.com/rebar -deprecated(move to below link)
+  - https://github.com/erlang/rebar3
   
 ![alt text][logo_main]  Kerl Installation
 -----------

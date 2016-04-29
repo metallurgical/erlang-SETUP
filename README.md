@@ -6,7 +6,7 @@
 Configurations Setting for ERLANG to work with both linux and windows. Requirements Need :
   - YAWS web server(optional)
   - MOCHIWEB Web Server(optional - easy to setup)
-  - ERLANG
+  - ERLANG(otp/erlang 17.0 at the time of writing) -- installation using kerl is recommended(linux)
   - rebar(erlang compiler)
   - cygwin(unix-like environment for windows)
   - Kerl( easy tools to handle otp/erlang installation - mainly for linux )
@@ -138,7 +138,9 @@ Rebar is an Erlang build tool that makes it easy to compile and test Erlang appl
 - **( Linux )**
   - coming....
 - **References**
-  - Rebar repo : https://github.com/basho/rebar
+  - Rebar installation are availble from the linux source repo. To install just run  : `sudo apt-get install rebar`
+  - The path automatically added into bin folder. And you're done.
+  - After this we can compile the erlang code using command `./rebar compile` or `rebar compile` from the working project directory
   
 ![alt text][logo_main]  Kerl Installation
 -----------

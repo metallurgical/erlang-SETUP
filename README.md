@@ -41,6 +41,30 @@ A DLL (cygwin1.dll) which provides substantial POSIX API functionality. After in
 - **( Linux )**
   - run `sudo apt-get install erlang`
   - Done!
+  
+![alt text][logo_main]  Erlang Installation using kerl
+-----------
+You should see the kerl installation. Find on this page.
+- **( Windows )**
+  - coming...
+- **( Linux )**
+  - Before we install erlang build, here is a a command to list the available releases
+    - `kerl list releases`, output :
+    - `Getting the available releases from erlang.org...
+       R10B-0 R10B-10 R10B-1a R10B-2 R10B-3 R10B-4 R10B-5 R10B-6 R10B-7 R10B-8 R10B-9 R11B-0 R11B-1 R11B-2 R11B-3 R11B-4 R11B-5 R12B-0 R12B-1 R12B-2 R12B-3 R12B-4 R12B-5 R13A R13B01 R13B02-1 R13B02 R13B03 R13B04 R13B R14A R14B01 R14B02 R14B03 R14B04 R14B_erts-5.8.1.1 R14B R15B01 R15B02 R15B02_with_MSVCR100_installer_fix R15B03-1 R15B03 R15B R16A_RELEASE_CANDIDATE R16B01 R16B02 R16B03-1 R16B03 R16B 17.0-rc1 17.0-rc2 17.0 17.1 17.3 17.4 17.5 18.0 18.1 18.2.1 18.2 18.3
+       Run "./kerl update releases" to update this list from erlang.org`
+  - Then pick which build to install : 
+     - `kerl build 17.0 17.0 --> kerl build <release> <build_name>` and if success should see the success message. 
+     - Sometime we encounter error when trying to build. Some of them :
+      - `checking whether the child waiter thread should be enabled... yes on SMP build, but not on non-SMP build` = to solve run : `sudo apt-get install libncurses5-dev`
+      - `configure: error: No curses library functions found` = to solve run : `sudo apt-get install libncurses5-dev`
+  - Now install a build to some location : `kerl install r14b02 /home/**/Documents/erlang/17.0`
+  - Check installation have been registered : `kerl list installations`
+  - And last, we need to activate it : `. /home/**/Documents/erlang/17.0/activate`
+- **References**
+  - ncurse 1 : http://stackoverflow.com/questions/19430437/install-libssl-dev-and-libncurses5-dev-without-root-privileges
+  - kerl : https://github.com/kerl/kerl
+  - ncurse 2 : http://erlang.org/pipermail/erlang-questions/2008-December/040539.html
 
 ![alt text][logo_main]  Mochiweb Installation(Skip if not related)
 -----------
@@ -133,24 +157,5 @@ Rebar is an Erlang build tool that makes it easy to compile and test Erlang appl
   - kerl : https://github.com/kerl/kerl
   
 
-![alt text][logo_main]  Erlang Installation using kerl
------------
-- **( Windows )**
-  - coming...
-- **( Linux )**
-  - Before we install erlang build, here is a a command to list the available releases
-    - `kerl list releases`, output :
-    - `Getting the available releases from erlang.org...
-       R10B-0 R10B-10 R10B-1a R10B-2 R10B-3 R10B-4 R10B-5 R10B-6 R10B-7 R10B-8 R10B-9 R11B-0 R11B-1 R11B-2 R11B-3 R11B-4 R11B-5 R12B-0 R12B-1 R12B-2 R12B-3 R12B-4 R12B-5 R13A R13B01 R13B02-1 R13B02 R13B03 R13B04 R13B R14A R14B01 R14B02 R14B03 R14B04 R14B_erts-5.8.1.1 R14B R15B01 R15B02 R15B02_with_MSVCR100_installer_fix R15B03-1 R15B03 R15B R16A_RELEASE_CANDIDATE R16B01 R16B02 R16B03-1 R16B03 R16B 17.0-rc1 17.0-rc2 17.0 17.1 17.3 17.4 17.5 18.0 18.1 18.2.1 18.2 18.3
-       Run "./kerl update releases" to update this list from erlang.org`
-  - Then pick which build to install : 
-     - `kerl build 17.0 17.0 --> kerl build <release> <build_name>` and if success should see the success message. 
-     - Sometime we encounter error when trying to build. Some of them :
-      - `checking whether the child waiter thread should be enabled... yes on SMP build, but not on non-SMP build` - to solve run : `sudo apt-get install libncurses5-dev`
-      - `configure: error: No curses library functions found` - to solve run : `sudo apt-get install libncurses5-dev`
-  - Now install a build to some location : `kerl install r14b02 /home/**/Documents/erlang/17.0`
-  - Check installation have been registered : `kerl list installations`
-  - And last, we need to activate it : `. /home/**/Documents/erlang/17.0/activate`
-- **References**
-  - ncurse : http://stackoverflow.com/questions/19430437/install-libssl-dev-and-libncurses5-dev-without-root-privileges
+
   

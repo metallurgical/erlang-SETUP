@@ -146,11 +146,11 @@ Rebar is an Erlang build tool that makes it easy to compile and test Erlang appl
   - Then pick which build to install : 
      - `kerl build 17.0 17.0 --> kerl build <release> <build_name>`
        `Downloading otp_src_17.0.tar.gz to /root/.kerl/archives
-        (curl progresses...)
-        Verifying archive checksum...
-        (curl progresses...)
-        Checksum verified (229fb8f193b09ac04a57a9d7794349b7)
-        Extracting source code
-        Building Erlang/OTP R14B02 (r14b02), please wait...
-        Erlang/OTP R14B02 has been successfully built`
+(curl progresses...)
+Verifying archive checksum...
+(curl progresses...)
+Checksum verified (229fb8f193b09ac04a57a9d7794349b7)
+Extracting source code
+Building Erlang/OTP R14B02 (r14b02), please wait...
+Erlang/OTP R14B02 has been successfully built`
   
